@@ -1,11 +1,11 @@
-# Project Manual: BCA Student Management System
-## Complete Line-by-Line Architectural Guide for 1st-Year BCA Students
+# Project Manual: Student Management System
+## Complete Line-by-Line Architectural Guide for Software & Web Development Aspirants
 
 ---
 
 ### Project Architectural Overview
 
-The **BCA Student Management System** follows a clean, modular Model-View-Controller (MVC) inspired pattern tailored for beginner comprehension. The following sequence diagram details the full lifecycle from browser request to database update:
+The **Student Management System** follows a clean, modular Model-View-Controller (MVC) inspired pattern tailored for beginner comprehension and real-world web architecture. The following sequence diagram details the full lifecycle from browser request to database update:
 
 ```mermaid
 sequenceDiagram

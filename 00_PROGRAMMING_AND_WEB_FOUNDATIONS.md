@@ -1,5 +1,5 @@
 # Part 0: Programming & Web Foundations
-## Zero-Level Prerequisites for First-Year BCA Students
+## Zero-Level Prerequisites for Web Development & Programming Aspirants
 
 ---
 
@@ -148,7 +148,7 @@ The entire internet is structured on the **Client-Server Architecture**.
 ```mermaid
 sequenceDiagram
     autonumber
-    actor User as BCA Student
+    actor User as Web User / Student
     participant Browser as Web Browser (Client)
     participant Server as Apache Web Server (Server)
     participant Engine as PHP Interpreter Engine
@@ -185,7 +185,7 @@ sequenceDiagram
 - **Dynamic Website**:
   - The web page is constructed on-the-fly by a server-side script (PHP) at the exact moment a user requests it.
   - The content changes based on who is logged in, what time it is, what search filters are applied, or what records exist in the database.
-  - Example: When student *Aman* logs into the BCA portal, the page displays *"Welcome, Aman! Your Roll No is 101."* When *Simran* logs in, the exact same PHP script displays *"Welcome, Simran! Your Roll No is 102."*
+  - Example: When student *Aman* logs into the student portal, the page displays *"Welcome, Aman! Your Roll No is 101."* When *Simran* logs in, the exact same PHP script displays *"Welcome, Simran! Your Roll No is 102."*
 
 ---
 
@@ -215,15 +215,15 @@ Every interaction on the World Wide Web consists of two distinct halves:
 - **Full Form**: **U**niform **R**esource **L**ocator (commonly known as a web address).
 - **Anatomy of a URL**:
 ```text
-https://www.ptu.ac.in:443/bca/syllabus.php?semester=1&subject=php#unit1
-|___|   |____________| |_| |____________| |_____________________| |____|
-  |           |         |         |                  |               |
-Protocol    Domain    Port      Path            Query String      Fragment
+https://www.example.edu:443/academics/syllabus.php?semester=1&subject=php#unit1
+|___|   |______________| |_| |____________________| |_____________________| |____|
+  |            |          |             |                      |               |
+Protocol     Domain     Port          Path                Query String      Fragment
 ```
 - **Protocol** (`http://` or `https://`): Rules used for communication (`https` is encrypted with SSL/TLS).
-- **Domain Name / Host** (`localhost` or `www.ptu.ac.in`): The human-friendly name of the server computer.
+- **Domain Name / Host** (`localhost` or `www.example.edu`): The human-friendly name of the server computer.
 - **Port** (`:80` for HTTP, `:443` for HTTPS): The software communication door on the server.
-- **Path** (`/bca/syllabus.php`): The exact directory and file on the server.
+- **Path** (`/academics/syllabus.php`): The exact directory and file on the server.
 - **Query String** (`?semester=1&subject=php`): Key-value pairs sent to the PHP script via GET.
 - **Fragment / Anchor** (`#unit1`): Jumps to a specific section within the HTML page.
 
@@ -260,7 +260,7 @@ To solve this, software engineers created **All-in-One Local Development Stacks*
 
 ### 24. The Big Picture: Relationship Between PHP, Apache, and MySQL
 
-Here is the master architectural diagram that every BCA student must understand and be able to draw in exams:
+Here is the master architectural diagram that every student and software aspirant must understand and be able to draw in exams or interviews:
 
 ```text
 +-------------------------------------------------------------------------------+
@@ -302,7 +302,7 @@ Here is the master architectural diagram that every BCA student must understand 
 ```
 
 #### Detailed Step-by-Step Explanation of Every Arrow:
-1. **Arrow 1 (Browser $\rightarrow$ Apache)**: The student opens Chrome and navigates to `http://localhost/bca/students.php`. Chrome packages this intent into a standard **HTTP GET Request** and transmits it over the local network stack to Apache listening on Port 80.
+1. **Arrow 1 (Browser $\rightarrow$ Apache)**: The user opens Chrome and navigates to `http://localhost/student-management/students.php`. Chrome packages this intent into a standard **HTTP GET Request** and transmits it over the local network stack to Apache listening on Port 80.
 2. **Arrow 2 (Apache $\rightarrow$ PHP Interpreter)**: Apache examines the URL path. It notices the file extension ends in `.php`. Apache knows it cannot execute PHP by itself, so it hands the file path to the **PHP Engine** (via `mod_php` or FastCGI).
 3. **Arrow 3 (PHP Interpreter $\rightarrow$ MySQL Database)**: Inside `students.php`, PHP encounters database code: `$pdo->query("SELECT * FROM students")`. PHP establishes a network socket connection to MySQL (usually on Port 3306) and sends the SQL string.
 4. **Arrow 4 (MySQL Database $\rightarrow$ PHP Interpreter)**: The MySQL database engine locates the table on disk, gathers the matching student records, and sends them back to PHP as a structured data set (tabular rows).

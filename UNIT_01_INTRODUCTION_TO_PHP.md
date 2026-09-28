@@ -1,5 +1,5 @@
 # Unit I: Introduction to PHP
-## Complete Bachelor of Computer Applications (BCA) & Computer Science Master Guide
+## Complete Computer Science, Web Engineering & Software Development Master Guide
 
 ---
 
@@ -27,7 +27,7 @@
 ### Concept 1.1: What is PHP and How Did It Evolve?
 - **Plain English Meaning**: PHP is a powerful computer language designed specifically for building websites. In 1994, a Danish-Canadian programmer named **Rasmus Lerdorf** wanted to know how many people were viewing his online resume. He wrote a small collection of binary programs in the C programming language and called them **"Personal Home Page Tools" (PHP Tools)**.
 - **Why It Exists**: In the early 1990s, the web was purely static text and pictures. If you wanted dynamic web pages, you had to write complex programs in C or Perl using CGI (Common Gateway Interface), which was slow, difficult to write, and frequently crashed web servers. PHP was invented to make server-side web scripting simple and directly embeddable within HTML.
-- **Where It Is Used Today**: Powering over 75% of all dynamic websites worldwide, including WordPress, Wikipedia, Slack, and major university portals.
+- **Where It Is Used Today**: Powering over 75% of all dynamic websites worldwide, including WordPress, Wikipedia, Slack, and major enterprise/university portals.
 
 #### Key Features of PHP (High-Frequency Exam Question):
 1. **Server-Side Execution**: All PHP code executes on the web server; only the resulting HTML output is transmitted to the client's browser.
@@ -74,7 +74,7 @@ timeline
 ---
 
 ### Concept 1.2: Comparative Study: PHP vs Other Server-Side Technologies
-In university examinations, you will frequently encounter questions asking you to compare PHP with ASP.NET, Java (JSP/Servlets), Python, and Node.js.
+In examinations and technical interviews, you will frequently encounter questions asking you to compare PHP with ASP.NET, Java (JSP/Servlets), Python, and Node.js.
 
 | Comparison Parameter | PHP | ASP.NET (Microsoft) | Java (JSP / Spring) | Node.js (JavaScript) |
 | :--- | :--- | :--- | :--- | :--- |
@@ -93,7 +93,7 @@ In university examinations, you will frequently encounter questions asking you t
 
 ### Concept 2.1: How PHP Connects to the Outside World
 - **Plain English Meaning**: PHP does not live in an isolated bubble. A complete web application must talk to outside systems: databases, disk storage, mail servers, payment gateways, and operating system utilities.
-- **Why It Exists**: To build a real-world software product (like Amazon or a PTU Student Portal), PHP must be able to read files, send SMS/emails, connect to banks, and store data in relational databases.
+- **Why It Exists**: To build a real-world software product (like Amazon or a Student Management Portal), PHP must be able to read files, send SMS/emails, connect to banks, and store data in relational databases.
 
 ```mermaid
 graph LR
@@ -119,8 +119,8 @@ graph LR
 
 ## Chapter 3: Hardware & Software Requirements
 
-### Concept 3.1: Setting Up the BCA Development Environment
-Before a student can practice PHP, their computer must meet basic requirements.
+### Concept 3.1: Setting Up the PHP Development Environment
+Before a learner can practice PHP, their computer must meet basic requirements.
 
 #### 1. Minimum Hardware Requirements (Very modest; almost any PC works):
 - **Processor**: Intel Dual Core / Core i3 or AMD equivalent (64-bit architecture recommended).
@@ -162,7 +162,7 @@ Step 7: Open your browser and navigate to http://localhost. If the XAMPP dashboa
 #### The Code:
 ```php
 <?php
-// My First PHP Program for 1st Year BCA
+// My First PHP Program
 echo "Hello World! Welcome to PHP.";
 ?>
 ```
@@ -191,10 +191,10 @@ Hello World! Welcome to PHP.
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>University BCA - PHP Demo</title>
+    <title>Academic Portal - PHP Demo</title>
 </head>
 <body>
-    <h1>Punjab Technical University</h1>
+    <h1>Computer Science & Web Development Portal</h1>
     <p>Current Server Date and Time is: 
         <strong>
             <?php 
@@ -303,7 +303,7 @@ graph TD
 | **Scalar** | **Float (Double)**| Numbers containing a decimal point or exponential notation. | `$marks = 89.50;` | `89.5` |
 | **Scalar** | **String** | A contiguous sequence of characters enclosed in single or double quotes. | `$city = "Jalandhar";` | `Jalandhar` |
 | **Scalar** | **Boolean** | Represents truth values; can only be `true` or `false`. | `$hasPassed = true;` | `1` (or empty for false) |
-| **Compound**| **Array** | A single variable holding multiple indexed or keyed values. | `$courses = ["BCA", "B.Tech"];` | Displays array items |
+| **Compound**| **Array** | A single variable holding multiple indexed or keyed values. | `$courses = ["Computer Science", "Web Development"];` | Displays array items |
 | **Compound**| **Object** | An instance of a user-defined class containing properties and methods. | `$std = new Student();` | Object instance |
 | **Special** | **NULL** | A variable with no value assigned, or explicitly set to `null`. | `$scholarship = null;` | Nothing displayed |
 | **Special** | **Resource** | Holds an external handler reference (e.g., open file handle, database connection). | `$file = fopen("log.txt","r");`| `Resource id #3` |
@@ -637,21 +637,21 @@ echo "isset(\$roll) after unset: " . (isset($roll) ? "YES" : "NO") . "<br>"; // 
 ```php
 <?php
 $item = "course";   // The variable $item contains the string "course"
-$$item = "BCA";     // This dynamically creates a variable named $course and sets it to "BCA"
+$$item = "Computer Science"; // This dynamically creates a variable named $course and sets it to "Computer Science"
 
-echo "Value of \$item: " . $item . "<br>";       // Prints: course
-echo "Value of \$\$item: " . $$item . "<br>";     // Prints: BCA
-echo "Direct access to \$course: " . $course . "<br>"; // Prints: BCA
+echo "Value of \$item: " . $item . "<br>";             // Prints: course
+echo "Value of \$\$item: " . $$item . "<br>";           // Prints: Computer Science
+echo "Direct access to \$course: " . $course . "<br>";   // Prints: Computer Science
 ?>
 ```
 
 #### Line-by-Line Breakdown:
 1. `$item = "course";`: Memory creates a variable `$item` storing `"course"`.
-2. `$$item = "BCA";`: PHP evaluates `$item` first, which resolves to `"course"`. The statement effectively becomes `$course = "BCA";`.
-3. Memory now contains two separate variables: `$item` containing `"course"`, and `$course` containing `"BCA"`.
+2. `$$item = "Computer Science";`: PHP evaluates `$item` first, which resolves to `"course"`. The statement effectively becomes `$course = "Computer Science";`.
+3. Memory now contains two separate variables: `$item` containing `"course"`, and `$course` containing `"Computer Science"`.
 
 > [!WARNING]
-> **Dynamic Variables vs Arrays**: Beginners often confuse dynamic variables with associative arrays. Dynamic variables create separate variables in the symbol table, which makes code difficult to read, debug, and maintain. In modern software engineering, you should almost always use **Associative Arrays** (`$student['course'] = "BCA"`) instead of dynamic variables!
+> **Dynamic Variables vs Arrays**: Beginners often confuse dynamic variables with associative arrays. Dynamic variables create separate variables in the symbol table, which makes code difficult to read, debug, and maintain. In modern software engineering, you should almost always use **Associative Arrays** (`$student['course'] = "Computer Science"`) instead of dynamic variables!
 
 ---
 
@@ -664,7 +664,7 @@ echo "Direct access to \$course: " . $course . "<br>"; // Prints: BCA
 ```mermaid
 graph TD
     subgraph Global Scope
-        G["$university = 'PTU'; (Accessible anywhere outside functions)"]
+        G["$university = 'Central University'; (Accessible anywhere outside functions)"]
     end
 
     subgraph Function Local Scope
@@ -702,7 +702,7 @@ function demonstrateScope() {
     global $university;
     
     // LOCAL VARIABLE
-    $localMessage = "Welcome to BCA Department";
+    $localMessage = "Welcome to Computer Science Department";
     
     // STATIC VARIABLE
     static $visitCounter = 0;
@@ -723,15 +723,15 @@ demonstrateScope();
 #### Output:
 ```text
 University: Central University
-Message: Welcome to BCA Department
+Message: Welcome to Computer Science Department
 Function Call Count: 1
 
 University: Central University
-Message: Welcome to BCA Department
+Message: Welcome to Computer Science Department
 Function Call Count: 2
 
 University: Central University
-Message: Welcome to BCA Department
+Message: Welcome to Computer Science Department
 Function Call Count: 3
 ```
 

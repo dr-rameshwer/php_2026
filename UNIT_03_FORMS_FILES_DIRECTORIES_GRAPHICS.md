@@ -1,5 +1,5 @@
 # Unit III: Forms, Files, Directories & Image Generation
-## Complete Bachelor of Computer Applications (BCA) & Computer Science Master Guide
+## Complete Computer Science, Web Engineering & Software Development Master Guide
 
 ---
 
@@ -86,7 +86,7 @@ sequenceDiagram
 
 #### The Complete Superglobals Reference Table:
 
-| Superglobal Array | Description & Purpose | Typical Real-World BCA Use Case |
+| Superglobal Array | Description & Purpose | Typical Real-World Web Application Use Case |
 | :--- | :--- | :--- |
 | **`$_GET`** | Associative array of variables passed via URL query strings or GET forms. | Reading search keywords: `$_GET['search']`. |
 | **`$_POST`** | Associative array of variables sent via HTTP POST forms. | Capturing login credentials: `$_POST['password']`. |
@@ -163,7 +163,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </head>
 <body>
 
-    <h2>BCA Student Registration</h2>
+    <h2>Student Registration Portal</h2>
 
     <?php if (!empty($successMessage)): ?>
         <p class="success"><?php echo $successMessage; ?></p>
@@ -565,7 +565,7 @@ Increasing Y
 5. **Output Image with HTTP Header**: `header("Content-Type: image/png")` followed by `imagepng($image)`.
 6. **Free Server Memory**: `imagedestroy($image)`.
 
-#### Complete Working Script: Generating a BCA Student ID Badge / Captcha Image:
+#### Complete Working Script: Generating a Student ID Badge / Captcha Image:
 ```php
 <?php
 // File: generate_badge.php
@@ -579,7 +579,7 @@ $image = imagecreatetruecolor($width, $height);
 
 // Step 2: Allocate RGB colors
 $bgColor = imagecolorallocate($image, 240, 244, 248);   // Soft grayish-blue
-$navyBlue = imagecolorallocate($image, 0, 51, 102);     // PTU Navy Blue
+$navyBlue = imagecolorallocate($image, 0, 51, 102);     // Navy Blue
 $accentGold = imagecolorallocate($image, 218, 165, 32); // Gold
 $textColor = imagecolorallocate($image, 30, 30, 30);    // Charcoal Gray
 $white = imagecolorallocate($image, 255, 255, 255);
@@ -594,10 +594,10 @@ imagefilledrectangle($image, 0, 0, $width, 35, $navyBlue);
 imageline($image, 0, 36, $width, 36, $accentGold);
 
 // Step 6: Render text onto the canvas (Font size 1 to 5 built-in fonts)
-imagestring($image, 4, 60, 10, "DEPARTMENT OF COMPUTER APPLICATIONS", $white);
+imagestring($image, 4, 60, 10, "DEPARTMENT OF COMPUTER SCIENCE", $white);
 imagestring($image, 5, 20, 55, "Student ID Card", $navyBlue);
 imagestring($image, 3, 20, 85, "Name   : Amanpreet Singh", $textColor);
-imagestring($image, 3, 20, 105, "Roll No: 2026-BCA-101", $textColor);
+imagestring($image, 3, 20, 105, "Roll No: 2026-CS-101", $textColor);
 
 // Step 7: Output final PNG stream to the browser
 imagepng($image);

@@ -1,10 +1,10 @@
 # PHP & WEB APPLICATION DEVELOPMENT MASTER STUDY GUIDE & PROJECT SUITE
 ## Complete University Degree Curriculum, Practical Laboratory Manual & Comprehensive Reference Guide
-### Universal Bachelor of Computer Applications (BCA) & Computer Science Syllabus
+### Universal Computer Science, Software Engineering & Web Development Syllabus
 
 ---
 
-Welcome to the **Complete, Exam-Oriented PHP Master Guide and Working Web Application Suite**, specially crafted for university undergraduate students in Computer Applications (BCA), Computer Science (B.Sc CS), and Information Technology (B.Tech IT).
+Welcome to the **Complete, Exam-Oriented PHP Master Guide and Working Web Application Suite**, specially crafted for university undergraduate students, college learners, and software engineering aspirants across Computer Applications, Computer Science, and Information Technology.
 
 This guide is designed as a **complete self-contained textbook replacement**. Every single concept is provided with:
 - **Conceptual Definition & Intuition**
@@ -19,7 +19,7 @@ This guide is designed as a **complete self-contained textbook replacement**. Ev
 - **Viva Voce Examiner Q&A**
 - **Hands-On Practice Exercises**
 
-**A student using this guide never needs to refer to any physical or external textbook.**
+**An aspirant or student using this guide never needs to refer to any physical or external textbook.**
 
 ---
 
@@ -34,13 +34,13 @@ This guide is designed as a **complete self-contained textbook replacement**. Ev
 | **Unit IV** | [UNIT_04_RDBMS_MYSQL_AND_PDO.md](file:///Users/rameshwer/php_2026/UNIT_04_RDBMS_MYSQL_AND_PDO.md) | RDBMS concepts, Tables, Keys (Primary, Foreign), DDL vs DML, SQL (`CREATE`, `INSERT`, `SELECT`, `UPDATE`, `DELETE`, `WHERE`, `ORDER BY`, `LIMIT`), Database connectivity (mysqli vs PDO), PDO Connection with DSN, Prepared Statements against SQL Injection, CRUD architecture. |
 | **Unit V** | [UNIT_05_WEB_SECURITY_AND_BOOTSTRAP.md](file:///Users/rameshwer/php_2026/UNIT_05_WEB_SECURITY_AND_BOOTSTRAP.md) | Web Security Fundamentals (SQLi, XSS, CSRF, Password Hashing with Bcrypt, Upload validation), Bootstrap 5 complete primer (Containers, Grid, Navbars, Cards, Forms, Alerts, Tables). |
 | **Unit VI** | [UNIT_06_ADVANCED_PHP_OOP_JSON_APIS.md](file:///Users/rameshwer/php_2026/UNIT_06_ADVANCED_PHP_OOP_JSON_APIS.md) | **Advanced Industry Topics:** Object-Oriented Programming (Classes, Objects, `$this`, Constructor, Destructor, Encapsulation, Inheritance, Polymorphism, Abstract Classes, Interfaces), Modern Error/Exception Handling (`try-catch-finally`), Cookies vs Sessions Architecture, JSON Processing & REST APIs (`json_encode`, `json_decode`, API endpoints), PDO Database Transactions (ACID properties, `commit`, `rollBack`), Modern PHP 8+ (`match`, `?->`, Constructor Promotion, Named Arguments). |
-| **Project**| [PROJECT_MANUAL_STUDENT_MANAGEMENT_SYSTEM.md](file:///Users/rameshwer/php_2026/PROJECT_MANUAL_STUDENT_MANAGEMENT_SYSTEM.md) | Complete manual, architecture diagrams, step-by-step setup, and line-by-line explanation of the **BCA Student Management System** located in `bca-student-management/`. |
+| **Project**| [PROJECT_MANUAL_STUDENT_MANAGEMENT_SYSTEM.md](file:///Users/rameshwer/php_2026/PROJECT_MANUAL_STUDENT_MANAGEMENT_SYSTEM.md) | Complete manual, architecture diagrams, step-by-step setup, and line-by-line explanation of the **Student Management System** located in `student-management/`. |
 
 ---
 
-## 🚀 Complete Practical Project: BCA Student Management System
+## 🚀 Complete Practical Project: Student Management System
 
-Inside the [bca-student-management](file:///Users/rameshwer/php_2026/bca-student-management/) directory, you will find a complete, production-grade, 100% working PHP & MySQL web application built with:
+Inside the [student-management](file:///Users/rameshwer/php_2026/student-management/) directory, you will find a complete, production-grade, 100% working PHP & MySQL web application built with:
 - **PHP 8+ / PDO** with secure prepared statements (Zero SQL injection risk).
 - **MySQL / MariaDB** with normalized relational database schema and seed data.
 - **Bootstrap 5 & Bootstrap Icons** for a responsive, modern UI.
@@ -51,18 +51,18 @@ Inside the [bca-student-management](file:///Users/rameshwer/php_2026/bca-student
 - **Flash Messaging**: Beautiful dismissible Bootstrap toast/alert notifications.
 
 ### Quick Run Instructions
-1. Copy the `bca-student-management` folder into your Apache document root:
-   - **XAMPP (Windows):** `C:\xampp\htdocs\bca-student-management`
-   - **XAMPP (Mac):** `/Applications/XAMPP/xamppfiles/htdocs/bca-student-management`
-   - **LAMP (Linux):** `/var/www/html/bca-student-management`
+1. Copy the `student-management` folder into your Apache document root:
+   - **XAMPP (Windows):** `C:\xampp\htdocs\student-management`
+   - **XAMPP (Mac):** `/Applications/XAMPP/xamppfiles/htdocs/student-management`
+   - **LAMP (Linux):** `/var/www/html/student-management`
 2. Start **Apache** and **MySQL** in your XAMPP Control Panel.
 3. Open `http://localhost/phpmyadmin` in your web browser.
 4. Import the SQL schema file:
    - File location: `database/schema.sql`
 5. Visit the application in your browser:
-   - URL: `http://localhost/bca-student-management/public/login.php`
+   - URL: `http://localhost/student-management/public/login.php`
    - **Default Admin Credentials**:
-     - Email: `admin@bca.edu`
+     - Email: `admin@portal.edu`
      - Password: `AdminPassword123`
 
 ---

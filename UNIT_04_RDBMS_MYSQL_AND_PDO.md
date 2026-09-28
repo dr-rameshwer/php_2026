@@ -1,5 +1,5 @@
 # Unit IV: Database Connectivity with MySQL & PDO
-## Complete Bachelor of Computer Applications (BCA) & Computer Science Master Guide
+## Complete Computer Science, Web Engineering & Software Development Master Guide
 
 ---
 
@@ -18,7 +18,7 @@
 ## Chapter 1: Introduction to RDBMS & SQL Fundamentals
 
 ### Concept 1.1: Core Database Terminology from Absolute Zero
-Many first-year BCA students confuse files with databases. Let us clarify the definitions:
+Many beginner students and aspirants confuse files with databases. Let us clarify the definitions:
 
 - **1. Data**: Raw, unorganized facts and figures without context (e.g., `"101"`, `"Simran"`, `"95"`).
 - **2. Information**: Processed, structured data that conveys clear meaning (e.g., *"Student Simran (Roll No 101) scored 95% in PHP"*).
@@ -43,7 +43,7 @@ Many first-year BCA students confuse files with databases. Let us clarify the de
 - Rigid relational schemas require explicit migration scripts when table structures evolve.
 
 ```text
-Database: bca_university
+Database: university_portal
 |
 +--- Table: courses
 |    |-- id (Primary Key)
@@ -63,17 +63,17 @@ A table in an RDBMS is structured like a spreadsheet:
 
 ```text
 Table Name: students
-+----+------------------+---------------------+-----------+----------+
-| id | name             | email               | course    | semester |  <-- Columns / Attributes
-+----+------------------+---------------------+-----------+----------+
-| 1  | Amanpreet Singh  | aman@ptu.ac.in      | BCA       | 1        |  <-- Row 1 (Tuple / Record)
-| 2  | Simran Kaur      | simran@ptu.ac.in    | BCA       | 1        |  <-- Row 2 (Tuple / Record)
-| 3  | Rajesh Kumar     | rajesh@ptu.ac.in    | B.Tech    | 3        |  <-- Row 3 (Tuple / Record)
-+----+------------------+---------------------+-----------+----------+
++----+------------------+---------------------+-------------------+----------+
+| id | name             | email               | course            | semester |  <-- Columns / Attributes
++----+------------------+---------------------+-------------------+----------+
+| 1  | Amanpreet Singh  | aman@example.edu    | Computer Science  | 1        |  <-- Row 1 (Tuple / Record)
+| 2  | Simran Kaur      | simran@example.edu  | Computer Science  | 1        |  <-- Row 2 (Tuple / Record)
+| 3  | Rajesh Kumar     | rajesh@example.edu  | Info Technology   | 3        |  <-- Row 3 (Tuple / Record)
++----+------------------+---------------------+-------------------+----------+
 ```
 
 - **Table (Relation)**: The overall grid container storing a specific category of entity (e.g., `students`).
-- **Column (Attribute / Field)**: A vertical vertical slice of data. Each column has a specific name and data type (e.g., `email` is `VARCHAR(100)`).
+- **Column (Attribute / Field)**: A vertical slice of data. Each column has a specific name and data type (e.g., `email` is `VARCHAR(100)`).
 - **Row (Tuple / Record)**: A single horizontal record representing one complete individual entity (e.g., all details belonging to Amanpreet).
 - **Primary Key (PK)**: A column (or group of columns) whose values **uniquely identify** every single row in the table.
   - *Rules for Primary Key*: Cannot contain `NULL` values; every row must have a unique value.
@@ -94,10 +94,10 @@ SQL is divided into two primary sub-languages:
 #### The Fundamental SQL Statements:
 ```sql
 -- 1. Create a new Database
-CREATE DATABASE bca_demo CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+CREATE DATABASE student_portal CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- 2. Use the Database
-USE bca_demo;
+USE student_portal;
 
 -- 3. Create a Table with Constraints
 CREATE TABLE students (
@@ -111,14 +111,14 @@ CREATE TABLE students (
 
 -- 4. INSERT: Add a new record
 INSERT INTO students (name, email, course, marks) 
-VALUES ('Amanpreet Singh', 'aman@ptu.ac.in', 'BCA', 88);
+VALUES ('Amanpreet Singh', 'aman@example.edu', 'Computer Science', 88);
 
 -- 5. SELECT: Retrieve all records
 SELECT * FROM students;
 
 -- 6. SELECT with filtering and ordering
 SELECT name, marks FROM students 
-WHERE course = 'BCA' AND marks >= 50 
+WHERE course = 'Computer Science' AND marks >= 50 
 ORDER BY marks DESC 
 LIMIT 10;
 
@@ -168,7 +168,7 @@ To connect to a database with PDO, you need a **Data Source Name (DSN)** string 
 <?php
 // Configuration Constants
 $host = "localhost";
-$db   = "bca_demo";
+$db   = "student_portal";
 $user = "root";       // Default XAMPP username
 $pass = "";           // Default XAMPP password is empty
 $charset = "utf8mb4"; // Full Unicode support (handles emojis and international text)
@@ -211,7 +211,7 @@ try {
 #### The Flawed (Vulnerable) Code:
 ```php
 // DANGEROUS CODE - DO NOT WRITE THIS!
-$email = $_POST['email'];       // Attacker enters: admin@ptu.ac.in' OR '1'='1
+$email = $_POST['email'];       // Attacker enters: admin@example.edu' OR '1'='1
 $password = $_POST['password']; // Attacker enters: ' OR '1'='1
 
 $sql = "SELECT * FROM users WHERE email = '$email' AND password = '$password'";
@@ -220,7 +220,7 @@ $pdo->query($sql);
 
 #### What the Database Actually Sees and Executes:
 ```sql
-SELECT * FROM users WHERE email = 'admin@ptu.ac.in' OR '1'='1' AND password = '' OR '1'='1';
+SELECT * FROM users WHERE email = 'admin@example.edu' OR '1'='1' AND password = '' OR '1'='1';
 ```
 Because `'1'='1'` is always `true`, the `WHERE` clause evaluates to true for every record in the table. The attacker logs in as the Administrator without knowing any password!
 
@@ -237,7 +237,7 @@ flowchart TD
     end
 
     subgraph Step 2: Data Binding
-        Data["PHP sends raw data separately:<br>:email => 'admin@ptu.ac.in\' OR \'1\'=\'1'"]
+        Data["PHP sends raw data separately:<br>:email => 'admin@example.edu\' OR \'1\'=\'1'"]
         Data --> Exec[MySQL executes pre-compiled plan with data]
     end
 
@@ -259,8 +259,8 @@ With **Prepared Statements**, the SQL query structure and the user-supplied data
 require_once "config/database.php";
 
 $name = "Harpreet Kaur";
-$email = "harpreet@ptu.ac.in";
-$course = "BCA";
+$email = "harpreet@example.edu";
+$course = "Computer Science";
 $marks = 85;
 
 // Step 1: Prepare the SQL statement with named placeholders (:name, :email, etc.)

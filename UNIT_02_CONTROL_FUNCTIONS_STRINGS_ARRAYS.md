@@ -1,5 +1,5 @@
 # Unit II: Control Statements, Functions, Strings & Arrays
-## Complete Bachelor of Computer Applications (BCA) & Computer Science Master Guide
+## Complete Computer Science, Web Engineering & Software Development Master Guide
 
 ---
 
@@ -116,19 +116,19 @@ flowchart TD
 #### Practical Switch Example (Course Fee Lookup):
 ```php
 <?php
-$course = "BCA";
+$course = "Computer Science";
 
 switch ($course) {
-    case "BCA":
+    case "Computer Science":
         $fee = 35000;
         $duration = "3 Years";
         break;
-    case "B.Tech":
-        $fee = 65000;
+    case "Information Technology":
+        $fee = 45000;
         $duration = "4 Years";
         break;
-    case "MCA":
-        $fee = 42000;
+    case "Data Science":
+        $fee = 50000;
         $duration = "2 Years";
         break;
     default:
@@ -364,10 +364,10 @@ Functions built directly into the PHP language engine, ready to use without requ
 echo "Length of String: " . strlen("PHP2026") . "<br>"; // 7
 
 // 2. strtoupper() - Converts text to uppercase
-echo "Uppercase: " . strtoupper("bca semester") . "<br>"; // BCA SEMESTER
+echo "Uppercase: " . strtoupper("php course") . "<br>"; // PHP COURSE
 
 // 3. strtolower() - Converts text to lowercase
-echo "Lowercase: " . strtolower("ADMIN@PUNJAB.IN") . "<br>"; // admin@punjab.in
+echo "Lowercase: " . strtolower("ADMIN@PORTAL.EDU") . "<br>"; // admin@portal.edu
 
 // 4. count() - Returns number of elements in an array
 $subjects = ["PHP", "DBMS", "OS", "Maths"];
@@ -391,15 +391,15 @@ echo "Absolute Value: " . abs(-45) . "<br>"; // 45
 
 ```php
 <?php
-function greetStudent($name, $course = "BCA") {
+function greetStudent($name, $course = "Computer Science") {
     return "Hello, " . $name . "! Welcome to the " . $course . " department.<br>";
 }
 
 // Calling with both arguments:
-echo greetStudent("Aman", "MCA"); // Uses passed value "MCA"
+echo greetStudent("Aman", "Information Technology"); // Uses passed value "Information Technology"
 
 // Calling with only one argument:
-echo greetStudent("Simran");        // Uses default value "BCA"
+echo greetStudent("Simran");        // Uses default value "Computer Science"
 ?>
 ```
 
@@ -628,7 +628,7 @@ Value:       ["Aman"]     ["Ravi"]     ["Simran"]
 
 Associative Array:
 Key:        ["name"]     ["roll"]     ["course"]
-Value:       "Aman"        101          "BCA"
+Value:       "Aman"        101      "Computer Science"
 ```
 
 ---
@@ -675,7 +675,7 @@ $removed = array_pop($students);   // Removes last item ("Harpreet")
 $student = [
     "roll_no"  => 101,
     "name"     => "Amanpreet Singh",
-    "course"   => "BCA",
+    "course"   => "Computer Science",
     "semester" => 1,
     "cgpa"     => 8.90
 ];
@@ -689,7 +689,7 @@ echo "Course: " . $student["course"] . "<br>";
 $student["semester"] = 2;
 
 // Adding a new key-value pair
-$student["email"] = "aman@ptu.ac.in";
+$student["email"] = "aman@example.edu";
 ?>
 ```
 
@@ -713,7 +713,7 @@ flowchart TD
 $student = [
     "Roll No"  => 101,
     "Name"     => "Amanpreet Singh",
-    "Course"   => "BCA",
+    "Course"   => "Computer Science",
     "College"  => "University Campus"
 ];
 
@@ -733,7 +733,7 @@ echo "</ul>";
 
 > [!CAUTION]
 > **University Syllabus Historical Context Alert**:
-> Academic syllabi frequently list `each()`. However, every BCA student must know the following crucial facts:
+> Academic syllabi frequently list `each()`. However, every software aspirant and student must know the following crucial facts:
 > 1. In PHP 4, 5, and early PHP 7, `each()` was an internal function that returned the current key-value pair of an array and advanced the internal array pointer. It was commonly paired with `list()` in a `while` loop: `while (list($key, $val) = each($array))`.
 > 2. **DEPRECATION & REMOVAL**: `each()` was deprecated in PHP 7.2 and **completely REMOVED in PHP 8.0** because it was slow, caused subtle pointer bugs, and was totally redundant with `foreach()`.
 > 3. **Exam Strategy**: In your theory exam, write the historical syntax of `each()` to satisfy the syllabus question, but explicitly add a note stating: *"Note: `each()` has been removed in modern PHP 8; `foreach()` is the official replacement."*
@@ -741,7 +741,7 @@ echo "</ul>";
 #### Historical Syntax of `each()`:
 ```php
 // HISTORICAL SYNTAX (PHP 5 / 7.0 ONLY - DO NOT RUN IN PHP 8)
-$courses = ["BCA", "MCA", "B.Tech"];
+$courses = ["PHP", "JavaScript", "Python"];
 
 // How programmers looped before foreach became universal:
 reset($courses); // Reset internal pointer to beginning
@@ -754,7 +754,7 @@ while ($element = each($courses)) {
 #### Modern Equivalent (What to write and use today):
 ```php
 // MODERN STANDARD (PHP 7 & 8)
-$courses = ["BCA", "MCA", "B.Tech"];
+$courses = ["PHP", "JavaScript", "Python"];
 foreach ($courses as $key => $value) {
     echo "Key: " . $key . " | Value: " . $value . "<br>";
 }

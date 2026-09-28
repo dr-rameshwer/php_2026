@@ -102,8 +102,8 @@ class Student {
 }
 
 // 2. Object Instantiation (Creating concrete objects in RAM)
-$student1 = new Student(101, "Amanpreet Singh", "BCA", 435.0);
-$student2 = new Student(102, "Simran Kaur", "BCA", 460.0);
+$student1 = new Student(101, "Amanpreet Singh", "Computer Science", 435.0);
+$student2 = new Student(102, "Simran Kaur", "Information Technology", 460.0);
 
 echo $student1->getDetails() . "<br>";
 echo "Percentage: " . $student1->calculatePercentage() . "%<br><br>";
@@ -184,7 +184,7 @@ class BankAccount {
     }
 }
 
-$acc = new BankAccount("PTU-BCA-9876", 5000.0);
+$acc = new BankAccount("AC-CS-9876", 5000.0);
 $acc->deposit(1500.0);
 echo "Current Balance: ₹" . $acc->getBalance(); // ₹6500
 ?>
@@ -255,11 +255,11 @@ class CollegeStudent extends Person {
 
     // Method Overriding (Polymorphism): Changing parent behavior
     public function getRole(): string {
-        return "BCA Undergraduate Student (Roll No: {$this->rollNo})";
+        return "Undergraduate Student (Roll No: {$this->rollNo}, Course: {$this->course})";
     }
 }
 
-$student = new CollegeStudent("Aman", "aman@univ.edu", 101, "BCA");
+$student = new CollegeStudent("Aman", "aman@univ.edu", 101, "Computer Science");
 echo $student->getProfile() . "<br>"; // Inherited from Person
 echo "Role: " . $student->getRole();    // Overridden in CollegeStudent
 ?>
@@ -482,7 +482,7 @@ Parses a JSON string. **Crucial Parameter**: If `$assoc = true`, it returns an *
 $studentData = [
     "roll_no"  => 101,
     "name"     => "Amanpreet Singh",
-    "course"   => "BCA",
+    "course"   => "Computer Science",
     "subjects" => ["PHP", "MySQL", "Computer Networks"],
     "is_enrolled" => true
 ];
@@ -513,9 +513,9 @@ header("Access-Control-Allow-Origin: *"); // Allows cross-origin API calls
 
 // 2. Mock Database Data
 $students = [
-    ["id" => 1, "name" => "Amanpreet Singh", "course" => "BCA", "marks" => 88],
-    ["id" => 2, "name" => "Simran Kaur", "course" => "BCA", "marks" => 94],
-    ["id" => 3, "name" => "Rajesh Kumar", "course" => "B.Tech", "marks" => 76]
+    ["id" => 1, "name" => "Amanpreet Singh", "course" => "Computer Science", "marks" => 88],
+    ["id" => 2, "name" => "Simran Kaur", "course" => "Computer Science", "marks" => 94],
+    ["id" => 3, "name" => "Rajesh Kumar", "course" => "Information Technology", "marks" => 76]
 ];
 
 // 3. Inspect HTTP Request Method
@@ -579,7 +579,7 @@ try {
     $pdo->beginTransaction();
 
     // 2. Perform Operation A: Deduct scholarship budget
-    $stmt1 = $pdo->prepare("UPDATE budget SET allocated = allocated - 25000 WHERE department = 'BCA'");
+    $stmt1 = $pdo->prepare("UPDATE budget SET allocated = allocated - 25000 WHERE department = 'Computer Science'");
     $stmt1->execute();
 
     // 3. Perform Operation B: Award scholarship to student record
@@ -622,7 +622,7 @@ $roleCode = 2;
 $roleName = match($roleCode) {
     1 => "Super Administrator",
     2 => "College Professor",
-    3 => "BCA Student",
+    3 => "Enrolled Student",
     default => "Unknown Guest"
 };
 

@@ -1,10 +1,10 @@
 # Unit V: Web Security Fundamentals & Bootstrap 5
-## Complete Bachelor of Computer Applications (BCA) & Computer Science Master Guide
+## Complete Computer Science, Web Engineering & Software Development Master Guide
 
 ---
 
 ### Syllabus & Practical Project Integration:
-To build the final university capstone project (**BCA Student Management System**), a 1st-year student must understand two critical real-world domains:
+To build the final capstone project (**Student Management System**), a software development student and aspirant must understand two critical real-world domains:
 1. **Web Application Security**: How to defend applications against hackers, data theft, and unauthorized access.
 2. **Bootstrap 5 UI Framework**: How to build modern, responsive, mobile-friendly interfaces without writing thousands of lines of custom CSS.
 
@@ -192,7 +192,7 @@ The core layout structure in Bootstrap consists of three levels:
 
 ---
 
-### Concept 2.4: Sample Bootstrap Form Snippet for BCA Portal
+### Concept 2.4: Sample Bootstrap Form Snippet for Student Portal
 ```html
 <div class="card shadow-sm mb-4">
     <div class="card-header bg-primary text-white">
@@ -207,7 +207,7 @@ The core layout structure in Bootstrap consists of three levels:
                 </div>
                 <div class="col-md-6 mb-3">
                     <label class="form-label">College Email</label>
-                    <input type="email" name="email" class="form-control" placeholder="e.g. aman@ptu.ac.in" required>
+                    <input type="email" name="email" class="form-control" placeholder="e.g. aman@example.edu" required>
                 </div>
             </div>
             <div class="mb-3">
