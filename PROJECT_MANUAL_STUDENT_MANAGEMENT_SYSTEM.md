@@ -114,7 +114,7 @@ sequenceDiagram
 - **1. What It Does**: Serves as the central command portal for the college administrator.
 - **2. Key Operations**:
   - Executes aggregate queries (`COUNT(*)`, `COUNT(DISTINCT course)`).
-  - Displays quick metrics for total students, BCA enrollment, and freshmen.
+  - Displays quick metrics for total students, primary department enrollment, and freshmen.
   - Displays the 5 most recently registered students with thumbnail avatars and action links.
 
 ---
