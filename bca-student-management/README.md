@@ -1,10 +1,10 @@
 # BCA Student Management System (PHP + MySQL + Bootstrap 5)
-## Official Capstone Project — IKGPTU BCA Curriculum
+## University Degree Curriculum Capstone Project
 
 ---
 
 ### Project Overview
-The **BCA Student Management System** is a full-featured, secure, production-grade web application developed in pure PHP 8+, MySQL (PDO), and Bootstrap 5. It was engineered specifically to satisfy the practical requirements of the IKGPTU 1st-Year BCA programming syllabus, demonstrating:
+The **BCA Student Management System** is a full-featured, secure, production-grade web application developed in pure PHP 8+, MySQL (PDO), and Bootstrap 5. It was engineered specifically to satisfy practical web programming and database management course requirements, demonstrating:
 
 1. **Authentication & Authorization**: Session-based login/logout, route protection, session fixation mitigation.
 2. **Database Operations (CRUD)**: Create, Read, Update, Delete students using PDO prepared statements (immune to SQL Injection).

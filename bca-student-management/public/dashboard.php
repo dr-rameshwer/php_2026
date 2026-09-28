@@ -57,7 +57,7 @@ require_once __DIR__ . '/../includes/header.php';
         <h2 class="fw-bold mb-1 text-dark">
             Welcome back, <?php echo e($currentUser['name']); ?>!
         </h2>
-        <p class="text-muted mb-0">IKGPTU Academic Portal &bull; Department of Computer Applications</p>
+        <p class="text-muted mb-0">University Academic Portal &bull; Department of Computer Applications</p>
     </div>
     <div class="d-flex gap-2">
         <a href="students/create.php" class="btn btn-warning fw-semibold shadow-sm text-dark">

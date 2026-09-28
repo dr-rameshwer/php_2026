@@ -1,5 +1,5 @@
 # Unit II: Control Statements, Functions, Strings & Arrays
-## BCA 1st Year Master Guide — I.K. Gujral Punjab Technical University (IKGPTU)
+## Complete Bachelor of Computer Applications (BCA) & Computer Science Master Guide
 
 ---
 
@@ -16,6 +16,19 @@
 ### Concept 1.1: Why Do We Need Control Statements?
 - **Plain English Meaning**: By default, a computer program executes strictly from top to bottom, one line after another (sequential execution). However, real life is full of decisions: *"If today is Sunday, the college is closed; otherwise, attend classes."* Control statements give a program the intelligence to make decisions, execute alternative paths, or repeat instructions based on specified conditions.
 - **Real-World Analogy**: A railway track switch. Depending on the signal (condition), the train is diverted onto Track A or Track B.
+
+#### Key Features of Control Statements:
+1. **Branching Logic**: Allows the CPU execution pointer to divert to different blocks of code.
+2. **Boolean Expression Evaluation**: Decisions are based on truth values (`true` or `false`).
+3. **Short-Circuit Evaluation**: In logical expressions (`$a && $b`), PHP stops evaluating early if the outcome is already guaranteed.
+
+#### Major Advantages:
+- Enables non-linear, dynamic program behavior (e.g., verifying user authorization before loading secret records).
+- Prevents redundant execution of unnecessary code blocks.
+
+#### Drawbacks & Common Pitfalls:
+- Deeply nested `if` statements (4+ levels deep) create "Pyramid of Doom" code that is hard to read and test.
+- Accidental assignment instead of comparison: `if ($x = 5)` instead of `if ($x == 5)` always evaluates to true and overwrites `$x`!
 
 ---
 
@@ -348,7 +361,7 @@ Functions built directly into the PHP language engine, ready to use without requ
 ```php
 <?php
 // 1. strlen() - Returns length of a string
-echo "Length of PTU: " . strlen("IKGPTU") . "<br>"; // 6
+echo "Length of String: " . strlen("PHP2026") . "<br>"; // 7
 
 // 2. strtoupper() - Converts text to uppercase
 echo "Uppercase: " . strtoupper("bca semester") . "<br>"; // BCA SEMESTER
@@ -701,7 +714,7 @@ $student = [
     "Roll No"  => 101,
     "Name"     => "Amanpreet Singh",
     "Course"   => "BCA",
-    "College"  => "IKGPTU Campus"
+    "College"  => "University Campus"
 ];
 
 echo "<h4>Student Profile</h4>";
@@ -719,8 +732,8 @@ echo "</ul>";
 ### Concept 5.5: The Historical `each()` Function (Syllabus Requirement Explained)
 
 > [!CAUTION]
-> **IKGPTU Syllabus Historical Context Alert**:
-> The syllabus specifically lists `each()`. However, every BCA student must know the following crucial facts:
+> **University Syllabus Historical Context Alert**:
+> Academic syllabi frequently list `each()`. However, every BCA student must know the following crucial facts:
 > 1. In PHP 4, 5, and early PHP 7, `each()` was an internal function that returned the current key-value pair of an array and advanced the internal array pointer. It was commonly paired with `list()` in a `while` loop: `while (list($key, $val) = each($array))`.
 > 2. **DEPRECATION & REMOVAL**: `each()` was deprecated in PHP 7.2 and **completely REMOVED in PHP 8.0** because it was slow, caused subtle pointer bugs, and was totally redundant with `foreach()`.
 > 3. **Exam Strategy**: In your theory exam, write the historical syntax of `each()` to satisfy the syllabus question, but explicitly add a note stating: *"Note: `each()` has been removed in modern PHP 8; `foreach()` is the official replacement."*

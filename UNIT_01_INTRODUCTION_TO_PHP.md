@@ -1,5 +1,5 @@
 # Unit I: Introduction to PHP
-## BCA 1st Year Master Guide — I.K. Gujral Punjab Technical University (IKGPTU)
+## Complete Bachelor of Computer Applications (BCA) & Computer Science Master Guide
 
 ---
 
@@ -28,6 +28,26 @@
 - **Plain English Meaning**: PHP is a powerful computer language designed specifically for building websites. In 1994, a Danish-Canadian programmer named **Rasmus Lerdorf** wanted to know how many people were viewing his online resume. He wrote a small collection of binary programs in the C programming language and called them **"Personal Home Page Tools" (PHP Tools)**.
 - **Why It Exists**: In the early 1990s, the web was purely static text and pictures. If you wanted dynamic web pages, you had to write complex programs in C or Perl using CGI (Common Gateway Interface), which was slow, difficult to write, and frequently crashed web servers. PHP was invented to make server-side web scripting simple and directly embeddable within HTML.
 - **Where It Is Used Today**: Powering over 75% of all dynamic websites worldwide, including WordPress, Wikipedia, Slack, and major university portals.
+
+#### Key Features of PHP (High-Frequency Exam Question):
+1. **Server-Side Execution**: All PHP code executes on the web server; only the resulting HTML output is transmitted to the client's browser.
+2. **Seamless HTML Embedding**: PHP tags (`<?php ... ?>`) can be interwoven directly inside HTML templates.
+3. **Cross-Platform Compatibility**: Runs identically across Microsoft Windows, Linux, macOS, and UNIX operating systems.
+4. **Loosely Typed / Dynamic Typing**: Variable types are bound dynamically at runtime; no need to declare `int` or `float` before assigning variables.
+5. **Extensive Native Database Drivers**: Built-in support for MySQL, PostgreSQL, SQLite, Oracle, and MS SQL via PDO.
+6. **Cost-Effective & Open-Source**: 100% free under the PHP License with zero licensing fees.
+
+#### Major Advantages of PHP:
+- **Zero Licensing Costs**: Free to download, deploy, and host commercially.
+- **Gentle Learning Curve**: Easy syntax that borrows familiar conventions from C, Java, and Perl.
+- **Instant Edit-and-Test Development Cycle**: No waiting for slow compilation steps; just save the file and refresh your browser.
+- **Cheap & Ubiquitous Hosting**: Virtually every web hosting company on earth provides cheap, one-click PHP hosting.
+- **Massive Community & Ecosystem**: Millions of packages, libraries, and tutorials available on Packagist/Composer.
+
+#### Drawbacks & Limitations of PHP:
+- **Historical Inconsistencies**: Some legacy function names have irregular conventions (e.g., `strlen` vs `str_replace`, `strpos` with parameters vs `in_array`).
+- **Dynamic Typing Pitfalls**: In large unmanaged codebases, loose typing can cause unexpected runtime type coercion bugs unless strict typing (`declare(strict_types=1);`) is enabled.
+- **Not Suited for Desktop GUI or Machine Learning**: PHP is engineered specifically for web request-response cycles; it is not commonly used for native 3D video games, mobile apps, or heavy mathematical data science.
 
 ```mermaid
 timeline
@@ -171,7 +191,7 @@ Hello World! Welcome to PHP.
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>IKGPTU BCA - PHP Demo</title>
+    <title>University BCA - PHP Demo</title>
 </head>
 <body>
     <h1>Punjab Technical University</h1>
@@ -298,7 +318,7 @@ $year = 2026;
 $percentage = 92.4;
 
 // 3. String
-$college = "IKGPTU Main Campus";
+$college = "University Main Campus";
 
 // 4. Boolean
 $isApproved = true;
@@ -308,7 +328,7 @@ $subjects = ["Programming in PHP", "Data Structures", "Mathematics"];
 
 // 6. Object
 class University {
-    public $name = "I.K. Gujral PTU";
+    public $name = "Central University";
 }
 $uni = new University();
 
@@ -675,7 +695,7 @@ graph TD
 ```php
 <?php
 // GLOBAL VARIABLE
-$university = "I.K. Gujral PTU";
+$university = "Central University";
 
 function demonstrateScope() {
     // Attempting to access global variable requires 'global' keyword
@@ -702,15 +722,15 @@ demonstrateScope();
 
 #### Output:
 ```text
-University: I.K. Gujral PTU
+University: Central University
 Message: Welcome to BCA Department
 Function Call Count: 1
 
-University: I.K. Gujral PTU
+University: Central University
 Message: Welcome to BCA Department
 Function Call Count: 2
 
-University: I.K. Gujral PTU
+University: Central University
 Message: Welcome to BCA Department
 Function Call Count: 3
 ```

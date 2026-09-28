@@ -26,7 +26,7 @@ $assetPath = $inSubfolder ? '../../assets/' : '../assets/';
 
 // Determine current page for active navbar highlighting
 $currentPage = basename($_SERVER['PHP_SELF']);
-$pageTitle = $pageTitle ?? 'BCA Student Management System - IKGPTU';
+$pageTitle = $pageTitle ?? 'BCA Student Management System';
 $currentUser = getCurrentUser();
 ?>
 <!DOCTYPE html>
@@ -58,7 +58,7 @@ $currentUser = getCurrentUser();
             <a class="navbar-brand d-flex align-items-center fw-bold" href="<?php echo $currentUser ? $rootPath . 'dashboard.php' : $rootPath . 'index.php'; ?>">
                 <i class="bi bi-mortarboard-fill fs-3 me-2 text-warning"></i>
                 <div>
-                    <span class="d-block lh-1">IKGPTU BCA</span>
+                    <span class="d-block lh-1">University BCA</span>
                     <small class="text-white-50 fs-6 fw-normal">Student Management System</small>
                 </div>
             </a>

@@ -1,5 +1,5 @@
 # Unit IV: Database Connectivity with MySQL & PDO
-## BCA 1st Year Master Guide — I.K. Gujral Punjab Technical University (IKGPTU)
+## Complete Bachelor of Computer Applications (BCA) & Computer Science Master Guide
 
 ---
 
@@ -26,6 +26,21 @@ Many first-year BCA students confuse files with databases. Let us clarify the de
 - **4. DBMS (Database Management System)**: A software suite that manages database files, handles data storage, and provides query interfaces (e.g., MS Access, FoxPro).
 - **5. RDBMS (Relational Database Management System)**: An advanced DBMS based on the **Relational Model** introduced by E.F. Codd in 1970. In an RDBMS, data is organized into two-dimensional **Tables** (Relations) consisting of **Rows** and **Columns**, with mathematical relationships between tables.
   - *Leading Examples*: MySQL, MariaDB, PostgreSQL, Oracle, Microsoft SQL Server.
+
+#### Key Features of an RDBMS:
+1. **Relational Table Model**: Organizes data into structured grids of rows and columns.
+2. **Data Integrity Constraints**: Enforces rules (`PRIMARY KEY`, `FOREIGN KEY`, `UNIQUE`, `NOT NULL`) to prevent corrupted records.
+3. **Declarative Query Language (SQL)**: Expressive queries retrieve complex datasets without specifying low-level disk algorithms.
+4. **ACID Transaction Support**: Guarantees that multi-step operations complete safely without partial failures.
+
+#### Major Advantages over Plain Text / CSV Files:
+- **Massive Concurrency**: Handles thousands of simultaneous read/write operations without file locking collisions.
+- **Fast Indexed Searching**: B-Tree and Hash indexes locate individual records in milliseconds among millions of rows.
+- **Granular Security**: Fine-grained user permissions control who can read, insert, update, or delete data.
+
+#### Drawbacks & Trade-offs:
+- Requires dedicated server memory, CPU resources, and setup overhead.
+- Rigid relational schemas require explicit migration scripts when table structures evolve.
 
 ```text
 Database: bca_university

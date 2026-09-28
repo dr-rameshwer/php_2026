@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-$pageTitle = 'Administrator Login - IKGPTU BCA Portal';
+$pageTitle = 'Administrator Login - University BCA Portal';
 require_once __DIR__ . '/../includes/header.php';
 ?>
 
@@ -66,7 +66,7 @@ require_once __DIR__ . '/../includes/header.php';
             <div class="bg-ptu-primary p-4 text-center text-white">
                 <i class="bi bi-shield-lock-fill fs-1 text-warning mb-2 d-inline-block"></i>
                 <h4 class="fw-bold mb-1">Administrative Login</h4>
-                <p class="text-white-50 small mb-0">IKGPTU BCA Student Portal Management</p>
+                <p class="text-white-50 small mb-0">University BCA Student Portal Management</p>
             </div>
 
             <!-- Card Body -->

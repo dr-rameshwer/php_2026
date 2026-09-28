@@ -1,5 +1,5 @@
 -- =====================================================================
--- IKGPTU BCA Student Management System - Database Schema & Seed Data
+-- University BCA Student Management System - Database Schema & Seed Data
 -- Database Engine: MySQL / MariaDB (InnoDB)
 -- Character Set: utf8mb4 (Full Unicode Support)
 -- =====================================================================

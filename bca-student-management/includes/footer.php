@@ -6,7 +6,7 @@
             <div class="row align-items-center">
                 <div class="col-md-6 text-md-start mb-2 mb-md-0">
                     <p class="mb-0">
-                        &copy; <?php echo date('Y'); ?> <strong>I. K. Gujral Punjab Technical University</strong>. All Rights Reserved.
+                        &copy; <?php echo date('Y'); ?> <strong>University BCA Academic Portal</strong>. All Rights Reserved.
                     </p>
                     <small class="text-secondary">BCA 1st Year Master Project & Academic Curriculum</small>
                 </div>

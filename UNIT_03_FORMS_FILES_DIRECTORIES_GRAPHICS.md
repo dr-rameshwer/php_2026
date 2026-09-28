@@ -1,5 +1,5 @@
 # Unit III: Forms, Files, Directories & Image Generation
-## BCA 1st Year Master Guide — I.K. Gujral Punjab Technical University (IKGPTU)
+## Complete Bachelor of Computer Applications (BCA) & Computer Science Master Guide
 
 ---
 
@@ -15,6 +15,19 @@
 ### Concept 1.1: What is a Web Form?
 - **Plain English Meaning**: An HTML form is an interactive graphical interface on a web page that allows human visitors to enter information (such as text, numbers, dates, passwords, or files) and send that data to the web server for processing.
 - **Why It Exists**: Websites cannot be interactive without two-way communication. A form is the bridge between human intention and server-side processing.
+
+#### Key Features of Web Forms:
+1. **Multi-Input Controls**: Captures diverse data formats (text, passwords, checkboxes, radio selections, dates, files).
+2. **Standardized HTTP Encoding**: Automatically serializes input into URL-encoded format (`application/x-www-form-urlencoded`) or binary stream (`multipart/form-data`).
+3. **Client-Side Pre-Validation**: HTML5 attributes (`required`, `type="email"`, `pattern`) validate formats before sending requests.
+
+#### Major Advantages:
+- Enables user authentication, profile registration, payments, and document submissions.
+- Separates user presentation (HTML view) from business logic processing (PHP backend).
+
+#### Drawbacks & Security Risks:
+- **Prone to Tampering**: Attackers can bypass client-side validation, manipulate hidden fields, or inject malicious payloads.
+- **CSRF Risks**: Without anti-CSRF token verification, malicious third-party websites can forge form submissions on behalf of logged-in victims.
 
 ### The Essential HTML Form Controls:
 - `<form>`: The wrapper container defining where (`action`) and how (`method`) the data is sent.
@@ -581,7 +594,7 @@ imagefilledrectangle($image, 0, 0, $width, 35, $navyBlue);
 imageline($image, 0, 36, $width, 36, $accentGold);
 
 // Step 6: Render text onto the canvas (Font size 1 to 5 built-in fonts)
-imagestring($image, 4, 80, 10, "IKGPTU - BCA DEPARTMENT", $white);
+imagestring($image, 4, 60, 10, "DEPARTMENT OF COMPUTER APPLICATIONS", $white);
 imagestring($image, 5, 20, 55, "Student ID Card", $navyBlue);
 imagestring($image, 3, 20, 85, "Name   : Amanpreet Singh", $textColor);
 imagestring($image, 3, 20, 105, "Roll No: 2026-BCA-101", $textColor);
