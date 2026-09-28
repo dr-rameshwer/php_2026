@@ -1,0 +1,136 @@
+/**
+ * BCA Student Management System - Custom CSS
+ * Modern, Professional Academic Theme
+ */
+
+:root {
+    --ptu-primary: #003366;
+    --ptu-primary-dark: #002244;
+    --ptu-accent: #d4af37;
+    --ptu-light: #f8fafc;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #1e293b;
+    background-color: #f1f5f9;
+}
+
+/* Brand Colors */
+.bg-ptu-primary {
+    background-color: var(--ptu-primary) !important;
+}
+
+.text-ptu-primary {
+    color: var(--ptu-primary) !important;
+}
+
+.border-ptu-primary {
+    border-color: var(--ptu-primary) !important;
+}
+
+/* Card Styling */
+.card {
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+}
+
+.card-header {
+    border-top-left-radius: 0.75rem !important;
+    border-top-right-radius: 0.75rem !important;
+    font-weight: 600;
+}
+
+/* Small Avatar Circles */
+.avatar-circle-sm {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.avatar-circle-lg {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.student-img-thumbnail {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #e2e8f0;
+}
+
+.student-img-profile {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Stat Cards */
+.stat-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+/* Table Enhancements */
+.table th {
+    font-weight: 600;
+    font-size: 0.825rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: #475569;
+    background-color: #f8fafc;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+/* Form Enhancements */
+.form-label {
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: #334155;
+    margin-bottom: 0.35rem;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #003366;
+    box-shadow: 0 0 0 0.25rem rgba(0, 51, 102, 0.15);
+}
+
+/* Image Upload Preview Box */
+#imagePreviewBox {
+    display: none;
+    max-width: 120px;
+    max-height: 120px;
+    border-radius: 8px;
+    border: 1px dashed #cbd5e1;
+    padding: 4px;
+    object-fit: cover;
+}
