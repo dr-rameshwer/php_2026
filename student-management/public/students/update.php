@@ -1,6 +1,6 @@
 <?php
 /**
- * BCA Student Management System
+ * Student Management System
  * Update Student Controller (UPDATE Action)
  * 
  * Purpose: Validates POST update submission, ensures email uniqueness across
@@ -90,7 +90,7 @@ if (empty($dob) || strtotime($dob) === false) {
     $errors['dob'] = 'Please enter a valid Date of Birth.';
 }
 
-$validCourses = ['BCA', 'MCA', 'B.Tech IT', 'B.Sc Computer Science'];
+$validCourses = ['Computer Science', 'Information Technology', 'Software Engineering', 'Data Science'];
 if (!in_array($course, $validCourses, true)) {
     $errors['course'] = 'Please select an authorized academic program.';
 }

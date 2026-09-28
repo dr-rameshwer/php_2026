@@ -1,6 +1,6 @@
 <?php
 /**
- * BCA Student Management System
+ * Student Management System
  * Secure File Download Controller
  * 
  * Purpose: Streams uploaded student photos or attachments safely to the client.

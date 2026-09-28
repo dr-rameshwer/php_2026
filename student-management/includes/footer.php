@@ -6,9 +6,9 @@
             <div class="row align-items-center">
                 <div class="col-md-6 text-md-start mb-2 mb-md-0">
                     <p class="mb-0">
-                        &copy; <?php echo date('Y'); ?> <strong>University BCA Academic Portal</strong>. All Rights Reserved.
+                        &copy; <?php echo date('Y'); ?> <strong>University Academic Portal</strong>. All Rights Reserved.
                     </p>
-                    <small class="text-secondary">BCA 1st Year Master Project & Academic Curriculum</small>
+                    <small class="text-secondary">Comprehensive Student Management System & Academic Curriculum</small>
                 </div>
                 <div class="col-md-6 text-md-end">
                     <span class="badge bg-secondary-subtle text-secondary border me-1">PHP 8.2+</span>

@@ -1,6 +1,6 @@
 <?php
 /**
- * BCA Student Management System
+ * Student Management System
  * Flash Notification System
  * 
  * Purpose: Allows PHP controllers to queue one-time status alerts (success,

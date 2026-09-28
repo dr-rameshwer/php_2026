@@ -1,6 +1,6 @@
 <?php
 /**
- * BCA Student Management System
+ * Student Management System
  * Students Directory Controller & View
  * 
  * Features: Multi-field Search, Course/Semester Filtering,
@@ -77,7 +77,7 @@ $students = $dataStmt->fetchAll();
 // Fetch Distinct Courses for Filter Dropdown
 $coursesList = $pdo->query("SELECT DISTINCT course FROM students ORDER BY course ASC")->fetchAll(PDO::FETCH_COLUMN);
 
-$pageTitle = 'Student Directory - BCA Management';
+$pageTitle = 'Student Directory - Student Management';
 require_once __DIR__ . '/../../includes/header.php';
 ?>
 

@@ -1,15 +1,15 @@
 -- =====================================================================
--- University BCA Student Management System - Database Schema & Seed Data
+-- University Student Management System - Database Schema & Seed Data
 -- Database Engine: MySQL / MariaDB (InnoDB)
 -- Character Set: utf8mb4 (Full Unicode Support)
 -- =====================================================================
 
 -- Step 1: Create Database if not exists
-CREATE DATABASE IF NOT EXISTS `bca_student_management`
+CREATE DATABASE IF NOT EXISTS `student_management`
     CHARACTER SET utf8mb4
     COLLATE utf8mb4_unicode_ci;
 
-USE `bca_student_management`;
+USE `student_management`;
 
 -- Step 2: Drop existing tables to ensure a clean slate if re-importing
 DROP TABLE IF EXISTS `students`;
@@ -44,17 +44,17 @@ CREATE TABLE `students` (
 -- Plaintext Password is: AdminPassword123
 -- Hashed using: password_hash('AdminPassword123', PASSWORD_BCRYPT)
 INSERT INTO `users` (`name`, `email`, `password`) VALUES
-('Head Administrator', 'admin@bca.edu', '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm');
+('Head Administrator', 'admin@portal.edu', '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm');
 
 -- Step 6: Insert Seed Student Records for Testing Search & Pagination
 INSERT INTO `students` (`name`, `email`, `phone`, `gender`, `dob`, `course`, `semester`, `address`, `photo`) VALUES
-('Amanpreet Singh', 'amanpreet@ptu.ac.in', '9876543210', 'Male', '2005-04-12', 'BCA', 1, 'Model Town, Jalandhar, Punjab', NULL),
-('Simran Kaur', 'simran@ptu.ac.in', '9812345678', 'Female', '2004-11-23', 'BCA', 1, 'Urban Estate Phase 2, Patiala, Punjab', NULL),
-('Rajesh Kumar', 'rajesh@ptu.ac.in', '9723456789', 'Male', '2003-08-15', 'BCA', 3, 'Civil Lines, Ludhiana, Punjab', NULL),
-('Pooja Sharma', 'pooja@ptu.ac.in', '9834567890', 'Female', '2005-01-30', 'BCA', 1, 'GT Road, Amritsar, Punjab', NULL),
-('Gurpreet Singh', 'gurpreet@ptu.ac.in', '9845678901', 'Male', '2004-06-18', 'MCA', 1, 'Sector 70, Mohali, Punjab', NULL),
-('Harleen Deol', 'harleen@ptu.ac.in', '9856789012', 'Female', '2003-12-05', 'BCA', 5, 'Mall Road, Bathinda, Punjab', NULL),
-('Navdeep Gill', 'navdeep@ptu.ac.in', '9867890123', 'Male', '2005-09-14', 'B.Tech IT', 1, 'Near University Campus, Kapurthala, Punjab', NULL),
-('Kiran Bala', 'kiran@ptu.ac.in', '9878901234', 'Female', '2004-03-22', 'BCA', 3, 'Hoshiarpur Road, Phagwara, Punjab', NULL),
-('Vikramaditya', 'vikram@ptu.ac.in', '9889012345', 'Male', '2004-07-09', 'BCA', 3, 'Chheharta, Amritsar, Punjab', NULL),
-('Tanya Verma', 'tanya@ptu.ac.in', '9890123456', 'Female', '2005-02-17', 'BCA', 1, 'Ranjit Avenue, Amritsar, Punjab', NULL);
+('Amanpreet Singh', 'amanpreet@example.edu', '9876543210', 'Male', '2005-04-12', 'Computer Science', 1, 'Model Town, City Center', NULL),
+('Simran Kaur', 'simran@example.edu', '9812345678', 'Female', '2004-11-23', 'Computer Science', 1, 'Urban Estate Phase 2', NULL),
+('Rajesh Kumar', 'rajesh@example.edu', '9723456789', 'Male', '2003-08-15', 'Information Technology', 3, 'Civil Lines', NULL),
+('Pooja Sharma', 'pooja@example.edu', '9834567890', 'Female', '2005-01-30', 'Computer Science', 1, 'Grand Trunk Road', NULL),
+('Gurpreet Singh', 'gurpreet@example.edu', '9845678901', 'Male', '2004-06-18', 'Software Engineering', 1, 'Sector 70', NULL),
+('Harleen Deol', 'harleen@example.edu', '9856789012', 'Female', '2003-12-05', 'Data Science', 5, 'Mall Road', NULL),
+('Navdeep Gill', 'navdeep@example.edu', '9867890123', 'Male', '2005-09-14', 'Information Technology', 1, 'University Campus Avenue', NULL),
+('Kiran Bala', 'kiran@example.edu', '9878901234', 'Female', '2004-03-22', 'Computer Science', 3, 'North Avenue Road', NULL),
+('Vikramaditya', 'vikram@example.edu', '9889012345', 'Male', '2004-07-09', 'Software Engineering', 3, 'Heritage Enclave', NULL),
+('Tanya Verma', 'tanya@example.edu', '9890123456', 'Female', '2005-02-17', 'Computer Science', 1, 'South Park Boulevard', NULL);

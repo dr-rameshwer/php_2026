@@ -1,6 +1,6 @@
 <?php
 /**
- * BCA Student Management System
+ * Student Management System
  * Logout Controller
  * 
  * Purpose: Safely terminates the user session, clears cookies,

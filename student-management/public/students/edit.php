@@ -1,6 +1,6 @@
 <?php
 /**
- * BCA Student Management System
+ * Student Management System
  * Edit Student Profile Controller & View
  * 
  * Purpose: Pre-populates existing student data into a validated form,
@@ -134,7 +134,7 @@ require_once __DIR__ . '/../../includes/header.php';
                             <select class="form-select <?php echo isset($errors['course']) ? 'is-invalid' : ''; ?>" 
                                     id="course" name="course" required>
                                 <?php 
-                                $courses = ['BCA', 'MCA', 'B.Tech IT', 'B.Sc Computer Science'];
+                                $courses = ['Computer Science', 'Information Technology', 'Software Engineering', 'Data Science'];
                                 foreach ($courses as $c): 
                                 ?>
                                     <option value="<?php echo $c; ?>" <?php echo (($old['course'] ?? '') === $c) ? 'selected' : ''; ?>>

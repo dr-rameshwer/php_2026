@@ -1,6 +1,6 @@
 <?php
 /**
- * BCA Student Management System
+ * Student Management System
  * Administrator Login Controller & View
  * 
  * Purpose: Authenticates administrative users using PDO prepared statements,
@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-$pageTitle = 'Administrator Login - University BCA Portal';
+$pageTitle = 'Administrator Login - University Academic Portal';
 require_once __DIR__ . '/../includes/header.php';
 ?>
 
@@ -66,7 +66,7 @@ require_once __DIR__ . '/../includes/header.php';
             <div class="bg-ptu-primary p-4 text-center text-white">
                 <i class="bi bi-shield-lock-fill fs-1 text-warning mb-2 d-inline-block"></i>
                 <h4 class="fw-bold mb-1">Administrative Login</h4>
-                <p class="text-white-50 small mb-0">University BCA Student Portal Management</p>
+                <p class="text-white-50 small mb-0">University Student Portal Management</p>
             </div>
 
             <!-- Card Body -->
@@ -83,7 +83,7 @@ require_once __DIR__ . '/../includes/header.php';
                 <div class="alert alert-info py-2 small mb-4">
                     <i class="bi bi-info-circle-fill me-1"></i>
                     <strong>Demo Admin Credentials:</strong><br>
-                    Email: <code>admin@bca.edu</code><br>
+                    Email: <code>admin@portal.edu</code><br>
                     Password: <code>AdminPassword123</code>
                 </div>
 
@@ -95,7 +95,7 @@ require_once __DIR__ . '/../includes/header.php';
                         <div class="input-group">
                             <span class="input-group-text bg-light"><i class="bi bi-envelope"></i></span>
                             <input type="email" class="form-control" id="email" name="email" 
-                                   value="<?php echo e($email); ?>" placeholder="admin@bca.edu" required autofocus>
+                                   value="<?php echo e($email); ?>" placeholder="admin@portal.edu" required autofocus>
                         </div>
                     </div>
 

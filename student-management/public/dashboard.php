@@ -1,6 +1,6 @@
 <?php
 /**
- * BCA Student Management System
+ * Student Management System
  * Admin Dashboard Controller & View
  * 
  * Purpose: Provides a high-level summary overview of enrolled students,
@@ -24,10 +24,10 @@ try {
     // 1. Total Student Count
     $totalStudents = (int)$pdo->query("SELECT COUNT(*) FROM students")->fetchColumn();
 
-    // 2. BCA Specific Count
-    $stmtBca = $pdo->prepare("SELECT COUNT(*) FROM students WHERE course = 'BCA'");
-    $stmtBca->execute();
-    $totalBca = (int)$stmtBca->fetchColumn();
+    // 2. Computer Science Department Count
+    $stmtDept = $pdo->prepare("SELECT COUNT(*) FROM students WHERE course = 'Computer Science'");
+    $stmtDept->execute();
+    $totalDept = (int)$stmtDept->fetchColumn();
 
     // 3. Semester 1 Students Count
     $stmtSem1 = $pdo->prepare("SELECT COUNT(*) FROM students WHERE semester = 1");
@@ -43,11 +43,11 @@ try {
 
 } catch (PDOException $e) {
     error_log("[Dashboard Query Error] " . $e->getMessage());
-    $totalStudents = $totalBca = $totalSem1 = $totalCourses = 0;
+    $totalStudents = $totalDept = $totalSem1 = $totalCourses = 0;
     $recentStudents = [];
 }
 
-$pageTitle = 'Dashboard - BCA Student Management System';
+$pageTitle = 'Dashboard - Student Management System';
 require_once __DIR__ . '/../includes/header.php';
 ?>
 
@@ -57,7 +57,7 @@ require_once __DIR__ . '/../includes/header.php';
         <h2 class="fw-bold mb-1 text-dark">
             Welcome back, <?php echo e($currentUser['name']); ?>!
         </h2>
-        <p class="text-muted mb-0">University Academic Portal &bull; Department of Computer Applications</p>
+        <p class="text-muted mb-0">University Academic Portal &bull; Department of Computer Science & IT</p>
     </div>
     <div class="d-flex gap-2">
         <a href="students/create.php" class="btn btn-warning fw-semibold shadow-sm text-dark">
@@ -86,7 +86,7 @@ require_once __DIR__ . '/../includes/header.php';
         </div>
     </div>
 
-    <!-- BCA Enrolled Card -->
+    <!-- Computer Science Enrolled Card -->
     <div class="col-sm-6 col-lg-3">
         <div class="card border-0 shadow-sm h-100">
             <div class="card-body d-flex align-items-center">
@@ -94,8 +94,8 @@ require_once __DIR__ . '/../includes/header.php';
                     <i class="bi bi-mortarboard-fill"></i>
                 </div>
                 <div>
-                    <span class="text-muted small d-block">BCA Students</span>
-                    <h3 class="fw-bold mb-0"><?php echo $totalBca; ?></h3>
+                    <span class="text-muted small d-block">Computer Science</span>
+                    <h3 class="fw-bold mb-0"><?php echo $totalDept; ?></h3>
                 </div>
             </div>
         </div>

@@ -1,6 +1,6 @@
 <?php
 /**
- * BCA Student Management System
+ * Student Management System
  * Database Configuration & PDO Initialization File
  * 
  * Purpose: Establishes a persistent, secure, exception-enabled PDO connection
@@ -18,7 +18,7 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
 // Database Credentials (Standard XAMPP / WAMP defaults)
 $dbHost     = "127.0.0.1";
 $dbPort     = "3306";
-$dbName     = "bca_student_management";
+$dbName     = "student_management";
 $dbUser     = "root";
 $dbPassword = "";
 $dbCharset  = "utf8mb4";
@@ -56,7 +56,7 @@ try {
             <p>The application could not connect to the MySQL database. Please verify:</p>
             <ul>
                 <li>MySQL service is started in your XAMPP Control Panel.</li>
-                <li>The database <code>bca_student_management</code> has been imported using <code>database/schema.sql</code>.</li>
+                <li>The database <code>student_management</code> has been imported using <code>database/schema.sql</code>.</li>
                 <li>Database credentials in <code>config/database.php</code> match your local environment.</li>
             </ul>
         </div>

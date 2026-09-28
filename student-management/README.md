@@ -1,10 +1,10 @@
-# BCA Student Management System (PHP + MySQL + Bootstrap 5)
-## University Degree Curriculum Capstone Project
+# Student Management System (PHP + MySQL + Bootstrap 5)
+## University Degree Curriculum & Software Development Capstone Project
 
 ---
 
 ### Project Overview
-The **BCA Student Management System** is a full-featured, secure, production-grade web application developed in pure PHP 8+, MySQL (PDO), and Bootstrap 5. It was engineered specifically to satisfy practical web programming and database management course requirements, demonstrating:
+The **Student Management System** is a full-featured, secure, production-grade web application developed in pure PHP 8+, MySQL (PDO), and Bootstrap 5. It was engineered specifically to satisfy practical web programming and database management course requirements, demonstrating:
 
 1. **Authentication & Authorization**: Session-based login/logout, route protection, session fixation mitigation.
 2. **Database Operations (CRUD)**: Create, Read, Update, Delete students using PDO prepared statements (immune to SQL Injection).
@@ -18,7 +18,7 @@ The **BCA Student Management System** is a full-featured, secure, production-gra
 ### Folder & File Architecture
 
 ```text
-bca-student-management/
+student-management/
 │
 ├── config/
 │   └── database.php         # PDO connection & options setup
@@ -35,7 +35,7 @@ bca-student-management/
 │
 ├── assets/
 │   ├── css/
-│   │   └── style.css        # Custom PTU styling, badges, avatars & preview
+│   │   └── style.css        # Custom styling, badges, avatars & preview
 │   └── js/
 │       └── script.js        # Alert auto-dismiss, file preview & delete confirmation
 │
@@ -66,9 +66,9 @@ bca-student-management/
 ### Step-by-Step Installation & Setup
 
 #### 1. Copy Project into Web Server Document Root
-- **Windows (XAMPP)**: Copy the entire `bca-student-management` folder to `C:\xampp\htdocs\bca-student-management`
-- **Mac (XAMPP)**: Copy to `/Applications/XAMPP/xamppfiles/htdocs/bca-student-management`
-- **Linux (Apache)**: Copy to `/var/www/html/bca-student-management`
+- **Windows (XAMPP)**: Copy the entire `student-management` folder to `C:\xampp\htdocs\student-management`
+- **Mac (XAMPP)**: Copy to `/Applications/XAMPP/xamppfiles/htdocs/student-management`
+- **Linux (Apache)**: Copy to `/var/www/html/student-management`
 
 #### 2. Start Services
 - Open **XAMPP Control Panel** and click **Start** on both **Apache** and **MySQL**.
@@ -78,14 +78,14 @@ bca-student-management/
 2. Click the **Import** tab at the top.
 3. Click **Choose File** and select `database/schema.sql` from this project folder.
 4. Click **Import** (or **Go**) at the bottom.
-5. The database `bca_student_management` and tables `users` and `students` will be created automatically with 10 seed student records and 1 admin account.
+5. The database `student_management` and tables `users` and `students` will be created automatically with 10 seed student records and 1 admin account.
 
 #### 4. Access the Application
 - Open Chrome or Firefox and navigate to:
-  `http://localhost/bca-student-management/public/login.php`
+  `http://localhost/student-management/public/login.php`
 
 #### 5. Default Administrator Login Credentials
-- **Email ID**: `admin@bca.edu`
+- **Email ID**: `admin@portal.edu`
 - **Password**: `AdminPassword123`
 
 ---

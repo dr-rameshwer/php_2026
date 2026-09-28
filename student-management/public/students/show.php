@@ -1,6 +1,6 @@
 <?php
 /**
- * BCA Student Management System
+ * Student Management System
  * View Student Profile Controller & View (READ Action)
  * 
  * Purpose: Retrieves and displays a single student's complete profile

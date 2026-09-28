@@ -1,6 +1,6 @@
 <?php
 /**
- * BCA Student Management System
+ * Student Management System
  * Application Landing Page
  * 
  * Purpose: Directs traffic to the appropriate starting point. If the user

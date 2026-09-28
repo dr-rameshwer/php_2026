@@ -1,6 +1,6 @@
 <?php
 /**
- * BCA Student Management System
+ * Student Management System
  * Authentication & Session Helper File
  * 
  * Purpose: Provides centralized, reusable authentication verification,

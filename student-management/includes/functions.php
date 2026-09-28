@@ -1,6 +1,6 @@
 <?php
 /**
- * BCA Student Management System
+ * Student Management System
  * Global Utility Functions & Security Helpers
  * 
  * Purpose: Contains reusable sanitization, CSRF token defenses, input validation,

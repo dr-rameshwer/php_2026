@@ -1,6 +1,6 @@
 <?php
 /**
- * BCA Student Management System
+ * Student Management System
  * Store Student Controller (CREATE Action)
  * 
  * Purpose: Handles POST submission, verifies CSRF token, executes strict
@@ -72,7 +72,7 @@ if (empty($dob) || strtotime($dob) === false) {
     $errors['dob'] = 'Please enter a valid Date of Birth.';
 }
 
-$validCourses = ['BCA', 'MCA', 'B.Tech IT', 'B.Sc Computer Science'];
+$validCourses = ['Computer Science', 'Information Technology', 'Software Engineering', 'Data Science'];
 if (!in_array($course, $validCourses, true)) {
     $errors['course'] = 'Please select an authorized academic program.';
 }

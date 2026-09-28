@@ -1,6 +1,6 @@
 <?php
 /**
- * BCA Student Management System
+ * Student Management System
  * Delete Student Controller (DELETE Action)
  * 
  * Purpose: Enforces POST-only deletion, verifies CSRF token, removes record

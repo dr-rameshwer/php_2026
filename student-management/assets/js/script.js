@@ -1,5 +1,5 @@
 /**
- * BCA Student Management System - Client Side JavaScript
+ * Student Management System - Client Side JavaScript
  * Enhances user experience, client-side confirmations, and image previews.
  */
 

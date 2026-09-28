@@ -1,6 +1,6 @@
 <?php
 /**
- * BCA Student Management System
+ * Student Management System
  * Add New Student Registration View
  * 
  * Purpose: Provides a validated Bootstrap 5 input form with file upload support
@@ -21,7 +21,7 @@ $old = $_SESSION['old_input'] ?? [];
 $errors = $_SESSION['form_errors'] ?? [];
 unset($_SESSION['old_input'], $_SESSION['form_errors']);
 
-$pageTitle = 'Add New Student - BCA Management';
+$pageTitle = 'Add New Student - Student Management';
 require_once __DIR__ . '/../../includes/header.php';
 ?>
 
@@ -117,10 +117,10 @@ require_once __DIR__ . '/../../includes/header.php';
                                     id="course" name="course" required>
                                 <option value="">-- Choose Program --</option>
                                 <?php 
-                                $courses = ['BCA', 'MCA', 'B.Tech IT', 'B.Sc Computer Science'];
+                                $courses = ['Computer Science', 'Information Technology', 'Software Engineering', 'Data Science'];
                                 foreach ($courses as $c): 
                                 ?>
-                                    <option value="<?php echo $c; ?>" <?php echo (($old['course'] ?? 'BCA') === $c) ? 'selected' : ''; ?>>
+                                    <option value="<?php echo $c; ?>" <?php echo (($old['course'] ?? 'Computer Science') === $c) ? 'selected' : ''; ?>>
                                         <?php echo $c; ?>
                                     </option>
                                 <?php endforeach; ?>
